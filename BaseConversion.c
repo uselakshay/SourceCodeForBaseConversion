@@ -2,7 +2,7 @@
 int main(){
     // Structure 1 2 3 4 for choice then exceuting simultaneosly
     int userchoice = choice();
-
+    printf("Entered Choice is %d",userchoice);
 }
 
 int choice(){
