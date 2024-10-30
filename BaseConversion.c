@@ -1,12 +1,4 @@
 #include <stdio.h>
-int main()
-{
-    // Structure 1 2 3 4 for choice then exceuting simultaneosly
-    int userchoice = choice();
-    printf("Entered Choice is %d", userchoice);
-    return 0;
-}
-
 int choice()
 {
     printf("Please Type your choice\n");
@@ -15,3 +7,12 @@ int choice()
     scanf("%d", &userchoice);
     return userchoice;
 }
+int main()
+{
+    // Structure 1 2 3 4 for choice then exceuting simultaneosly
+    int userchoice = choice();
+    printf("\n Entered Choice is %d", userchoice);
+    return 0;
+}
+
+
