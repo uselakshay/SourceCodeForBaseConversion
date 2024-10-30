@@ -24,20 +24,34 @@ int askDecimal()
 int convertDecimaltoBinary(int dec)
 {
     // dec number is 24 into 1010001
-    if (dec == 0){
+    if (dec == 0)
+    {
         return 0;
-    }else{
-        return (dec % 2)+convertDecimaltoBinary(dec/2);
+    }
+    else
+    {
+        return (dec % 2) + convertDecimaltoBinary(dec / 2);
     }
 }
-int convertBinaryToDecimal(int bin,int t,int c){
-    if (bin>0){
-        t+=(bin%10)*c;
-        return convertBinaryToDecimal(bin/10,t,c*2);
-    }else{
+int convertBinaryToDecimal(int bin, int t, int c)
+{
+    // ok
+    if (bin > 0)
+    {
+        t += (bin % 10) * c;
+        return convertBinaryToDecimal(bin / 10, t, c * 2);
+    }
+    else
+    {
         return t;
     }
 }
+
+int convertDecimalToHexaDecimal(int dec)
+{
+    
+}
+
 void executingFunction(int userchoice)
 {
     int bin, dec;
@@ -46,12 +60,17 @@ void executingFunction(int userchoice)
     case 1:
         dec = askDecimal();
         bin = convertDecimaltoBinary(dec);
-        printf("Binary number is %d ",bin);
+        printf("Binary number is %d ", bin);
         break;
     case 2:
         bin = askBinary();
-        dec = convertBinaryToDecimal(bin,0,1);
-        printf("Decimal number is %d",&dec);
+        dec = convertBinaryToDecimal(bin, 0, 1);
+        printf("Decimal number is %d", dec);
+        break;
+    case 3:
+        dec = askDecimal();
+        convertDecimalToHexaDecimal(dec);
+        break;
     default:
         printf("Error!");
     }
